@@ -25,7 +25,9 @@ switch (comando) {
     case 'promedioGeneral':
         funciones.promedioGeneral();
         break;
-
+    case 'actualizar':
+        funciones.actualizar(argv.nombre, argv.asignatura, argv.calificacion);
+        break;
     default:
         console.log('No ingreso una función existente')
         break;

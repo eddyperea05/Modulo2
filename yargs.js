@@ -30,11 +30,24 @@ const creacion = {
     programacion
 }
 
+const actualizar = {
+    nombre,
+    asignatura: {
+        demand: true,
+        alias: 'a'
+    },
+    calificacion: {
+        demand: true,
+        alias: 'c'
+    }
+}
+
 const argv = require('yargs')
     .command('crear', 'Para crear alumnos', creacion)
     //.command('mostrar', 'Muestra los alumnos regristrados al momento')
     .command('mostrarEst', 'Muestra los alumnos regristrados al momento', muestreEst)
     .command('promedioEstudiante', 'Realiza el promedio de un estudiante', muestreEst)
+    .command('actualizar', 'Realizar modificaciones en los alumnos', actualizar)
     .argv;
 
 module.exports = {

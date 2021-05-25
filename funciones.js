@@ -106,11 +106,23 @@ const promedioGeneral = () => {
     }
 }
 
+const actualizar = (nombre, asignatura, calificacion) => {
+    listar()
+    let est = listaEstudiantes.find(buscar => buscar.nombre == nombre)
+    if (!est) {
+        console.log('El estudiante no existe')
+    } else {
+        est[asignatura] = calificacion;
+        guardar()
+    }
+}
+
 module.exports = {
     crear,
     mostrar,
     mostrarEst,
     mostrarMat,
     promedioEstudiante,
-    promedioGeneral
+    promedioGeneral,
+    actualizar
 }
