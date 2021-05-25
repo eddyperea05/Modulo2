@@ -12,7 +12,18 @@ switch (comando) {
         funciones.mostrar();
         break;
     case 'mostrarEst':
-        funciones.mostrarEst();
+        funciones.mostrarEst(argv.nombre);
+        break;
+
+    case 'mostrarMat':
+        funciones.mostrarMat();
+        break;
+
+    case 'promedioEstudiante':
+        funciones.promedioEstudiante(argv.nombre);
+        break;
+    case 'promedioGeneral':
+        funciones.promedioGeneral();
         break;
 
     default:

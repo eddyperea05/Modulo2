@@ -19,6 +19,10 @@ const programacion = {
     alias: 'p'
 }
 
+const muestreEst = {
+    nombre
+}
+
 const creacion = {
     nombre,
     matematicas,
@@ -28,8 +32,9 @@ const creacion = {
 
 const argv = require('yargs')
     .command('crear', 'Para crear alumnos', creacion)
-    .command('mostrar', 'Muestra los alumnos regristrados al momento')
-    .command('mostrarEst', 'Muestra los alumnos regristrados al momento', nombre)
+    //.command('mostrar', 'Muestra los alumnos regristrados al momento')
+    .command('mostrarEst', 'Muestra los alumnos regristrados al momento', muestreEst)
+    .command('promedioEstudiante', 'Realiza el promedio de un estudiante', muestreEst)
     .argv;
 
 module.exports = {
