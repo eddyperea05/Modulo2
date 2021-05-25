@@ -28,6 +28,8 @@ const creacion = {
 
 const argv = require('yargs')
     .command('crear', 'Para crear alumnos', creacion)
+    .command('mostrar', 'Muestra los alumnos regristrados al momento')
+    .command('mostrarEst', 'Muestra los alumnos regristrados al momento', nombre)
     .argv;
 
 module.exports = {

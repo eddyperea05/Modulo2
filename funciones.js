@@ -37,6 +37,30 @@ const guardar = () => {
     })
 }
 
+const mostrar = () => {
+    listar();
+    console.log('Notas de los estudiantes' + '\n')
+    listaEstudiantes.forEach(estudiante => {
+        console.log(estudiante.nombre)
+        console.log('Notas')
+        console.log('matematicas: ' + estudiante.matematicas)
+        console.log('Ingles: ' + estudiante.ingles)
+        console.log('Programación: ' + estudiante.programacion + '\n')
+    })
+}
+
+const mostrarEst = (estudianteNombre) => {
+    listar()
+    let estudianteB = listaEstudiantes.find(nom => nom.nombre == estudianteNombre)
+    if (!estudianteB) {
+        console.log('Se ha encontrado el estudiante')
+    } else {
+        console.log('El estudiante no existe')
+    }
+}
+
 module.exports = {
-    crear
+    crear,
+    mostrar,
+    mostrarEst
 }
