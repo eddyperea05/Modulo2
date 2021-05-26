@@ -42,12 +42,17 @@ const actualizar = {
     }
 }
 
+const eliminar = {
+    nombre
+}
+
 const argv = require('yargs')
     .command('crear', 'Para crear alumnos', creacion)
     //.command('mostrar', 'Muestra los alumnos regristrados al momento')
     .command('mostrarEst', 'Muestra los alumnos regristrados al momento', muestreEst)
     .command('promedioEstudiante', 'Realiza el promedio de un estudiante', muestreEst)
     .command('actualizar', 'Realizar modificaciones en los alumnos', actualizar)
+    .command('eliminar', 'Realizar modificaciones en los alumnos', eliminar)
     .argv;
 
 module.exports = {

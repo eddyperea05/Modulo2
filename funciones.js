@@ -117,6 +117,17 @@ const actualizar = (nombre, asignatura, calificacion) => {
     }
 }
 
+const eliminar = (nom) => {
+    listar()
+    let nuevo = listaEstudiantes.filter(est => est.nombre != nom)
+    if (nuevo.length == listaEstudiantes.length) {
+        console.log('No hay estudiantes con ese nombre')
+    } else {
+        listaEstudiantes = nuevo
+        guardar()
+    }
+}
+
 module.exports = {
     crear,
     mostrar,
@@ -124,5 +135,6 @@ module.exports = {
     mostrarMat,
     promedioEstudiante,
     promedioGeneral,
-    actualizar
+    actualizar,
+    eliminar
 }
